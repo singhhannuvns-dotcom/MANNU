@@ -31,7 +31,7 @@ export default function Section12FinalEnding() {
             transition={{ duration: 1, delay: 0.4 }}
             className="text-2xl md:text-3xl font-light text-warm-cream/70 tracking-wide"
           >
-            That's all.
+            That's all for now.
           </motion.p>
 
           {/* Second line */}
@@ -41,18 +41,28 @@ export default function Section12FinalEnding() {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-xl md:text-2xl font-light text-warm-cream/60 tracking-wide"
           >
-            I just wanted you to know—
+            I just wanted to tell you—
+          </motion.p>
+
+          {/* Third line - casual reasoning */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 1.1 }}
+            className="text-xl md:text-2xl font-light text-warm-cream/50 tracking-wide italic"
+          >
+            I felt like saying it.
           </motion.p>
 
           {/* Main message */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1, delay: 1.2 }}
+            transition={{ duration: 1, delay: 1.5 }}
             className="pt-8 pb-6"
           >
             <p className="text-4xl md:text-5xl lg:text-6xl font-light text-warm-cream tracking-wide leading-relaxed">
-              you matter to me.
+              You matter to me.
             </p>
           </motion.div>
 
@@ -60,19 +70,9 @@ export default function Section12FinalEnding() {
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
             animate={isInView ? { scaleX: 1, opacity: 0.2 } : { scaleX: 0, opacity: 0 }}
-            transition={{ duration: 1, delay: 1.8 }}
+            transition={{ duration: 1, delay: 2.1 }}
             className="w-32 h-[1px] bg-warm-cream mx-auto my-8"
           />
-
-          {/* Subtle heart */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 0.2 } : { opacity: 0 }}
-            transition={{ duration: 1.5, delay: 2.2 }}
-            className="text-5xl text-warm-cream"
-          >
-            ♡
-          </motion.div>
         </motion.div>
       </div>
     </section>
