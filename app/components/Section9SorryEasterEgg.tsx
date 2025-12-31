@@ -28,6 +28,8 @@ export default function Section9SorryEasterEgg() {
 
   const handleVideoEnd = () => {
     resumeAfterVideo()
+    // Optionally close video after it ends (user can also click outside)
+    // setTimeout(() => setShowVideo(false), 2000)
   }
 
   const handleVideoError = () => {
@@ -106,28 +108,38 @@ export default function Section9SorryEasterEgg() {
       <AnimatePresence>
         {showVideo && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="max-w-2xl w-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-[60] px-6"
+            onClick={() => setShowVideo(false)}
           >
-            {videoError ? (
-              <div className="w-full aspect-video bg-soft-charcoal/10 rounded-2xl shadow-2xl flex items-center justify-center">
-                <p className="text-soft-charcoal/60">
-                  Video not available
-                </p>
-              </div>
-            ) : (
-              <video
-                src="/videos/sorry-marathi.mp4"
-                controls
-                autoPlay
-                className="w-full rounded-2xl shadow-2xl"
-                onEnded={handleVideoEnd}
-                onError={handleVideoError}
-              >
-                Your browser does not support the video tag.
-              </video>
-            )}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="max-w-4xl w-full"
+            >
+              {videoError ? (
+                <div className="w-full aspect-video bg-soft-charcoal/10 rounded-2xl shadow-2xl flex items-center justify-center">
+                  <p className="text-warm-cream/60">
+                    Video not available
+                  </p>
+                </div>
+              ) : (
+                <video
+                  src="/videos/sorry-marathi.mp4"
+                  controls
+                  autoPlay
+                  className="w-full rounded-2xl shadow-2xl"
+                  onEnded={handleVideoEnd}
+                  onError={handleVideoError}
+                >
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
