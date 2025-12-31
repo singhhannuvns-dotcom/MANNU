@@ -25,7 +25,7 @@ export default function Section2Lyrics() {
       
       <div className="max-w-4xl w-full space-y-10 relative z-10">
         
-        {/* 1. "Before 2025 ends…" - small, soft */}
+        {/* 1. "Before 2026 ends…" - small, soft */}
         <motion.div
           ref={ref1}
           initial={{ opacity: 0, y: 10 }}
@@ -34,7 +34,7 @@ export default function Section2Lyrics() {
           className="text-center"
         >
           <p className="text-xl md:text-2xl text-soft-charcoal/60 font-light italic">
-            Before 2025 ends…
+            Before 2026 ends…
           </p>
         </motion.div>
 

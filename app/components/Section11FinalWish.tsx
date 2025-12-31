@@ -8,10 +8,10 @@ import KineticText from './KineticText'
 const finalLines = [
   "So yeah…",
   "",
-  "before 2025 starts judging us,",
+  "before 2026 starts judging us,",
   "",
   "",
-  "Happy New Year, Mansasvi.",
+  "Happy New Year, Manasvi.",
   "",
   "",
   "Let's keep the calls long,",

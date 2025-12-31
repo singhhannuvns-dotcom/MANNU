@@ -52,7 +52,7 @@ export default function EndingPenguin() {
               className="bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-white/30"
             >
               <span className="text-sm text-soft-charcoal font-medium">
-                Happy New Year! 🐧
+                Happy New Year 2026! 🐧
               </span>
             </motion.div>
           </>

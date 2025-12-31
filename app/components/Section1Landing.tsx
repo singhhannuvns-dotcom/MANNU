@@ -46,7 +46,7 @@ export default function Section1Landing() {
         >
           <div className="relative">
             <KineticText
-              text="Hi again, Mansasvi."
+              text="Hi again, Manasvi."
               type="word"
               style="float"
               delay={1}

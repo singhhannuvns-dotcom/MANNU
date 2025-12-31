@@ -1,4 +1,4 @@
-# New Year 2025 - A Special Website for Mansasvi 💙
+# New Year 2026 - A Special Website for Manasvi 💙
 
 A beautiful, emotionally-paced, single-page scrolling experience made with love.
 
@@ -108,6 +108,6 @@ vercel
 
 Or push to GitHub and connect to Vercel for automatic deployments.
 
-## 🎁 Made with love for Mansasvi
+## 🎁 Made with love for Manasvi
 
 Every scroll, every animation, every word chosen with care.
